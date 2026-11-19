@@ -1,0 +1,74 @@
+{
+    "success": {
+        "run_id": "ccef7584-ee6c-4bda-8720-34578b81e28b",
+        "correlation_id": "31b4b68a-6232-497d-8df1-08b5f2dd0031",
+        "events": [
+            {
+                "run_id": "ccef7584-ee6c-4bda-8720-34578b81e28b",
+                "correlation_id": "31b4b68a-6232-497d-8df1-08b5f2dd0031",
+                "event": "workflow.created",
+                "state": "created",
+                "timestamp": "2026-11-19T13:19:30.115306Z",
+                "details": {
+                    "invoice_id": "INV-TASK4-001"
+                }
+            },
+            {
+                "run_id": "ccef7584-ee6c-4bda-8720-34578b81e28b",
+                "correlation_id": "31b4b68a-6232-497d-8df1-08b5f2dd0031",
+                "event": "start",
+                "state": "running",
+                "timestamp": "2026-11-19T13:19:30.115327Z",
+                "details": {
+                    "previous_state": "created"
+                }
+            },
+            {
+                "run_id": "ccef7584-ee6c-4bda-8720-34578b81e28b",
+                "correlation_id": "31b4b68a-6232-497d-8df1-08b5f2dd0031",
+                "event": "complete",
+                "state": "completed",
+                "timestamp": "2026-11-19T13:19:30.115588Z",
+                "details": {
+                    "previous_state": "running"
+                }
+            }
+        ]
+    },
+    "failure": {
+        "run_id": "8e058b75-c767-4838-b748-5b6274f2c3b4",
+        "correlation_id": "649bfcbb-e47d-489d-a790-5cc704d127aa",
+        "events": [
+            {
+                "run_id": "8e058b75-c767-4838-b748-5b6274f2c3b4",
+                "correlation_id": "649bfcbb-e47d-489d-a790-5cc704d127aa",
+                "event": "workflow.created",
+                "state": "created",
+                "timestamp": "2026-11-19T13:19:30.115750Z",
+                "details": {
+                    "invoice_id": "INV-TASK4-001"
+                }
+            },
+            {
+                "run_id": "8e058b75-c767-4838-b748-5b6274f2c3b4",
+                "correlation_id": "649bfcbb-e47d-489d-a790-5cc704d127aa",
+                "event": "start",
+                "state": "running",
+                "timestamp": "2026-11-19T13:19:30.115764Z",
+                "details": {
+                    "previous_state": "created"
+                }
+            },
+            {
+                "run_id": "8e058b75-c767-4838-b748-5b6274f2c3b4",
+                "correlation_id": "649bfcbb-e47d-489d-a790-5cc704d127aa",
+                "event": "fail",
+                "state": "needs_review",
+                "timestamp": "2026-11-19T13:19:30.116029Z",
+                "details": {
+                    "previous_state": "running"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "timeout_recovery": [
+        {
+            "attempt": 1,
+            "outcome": "timeout",
+            "action": "retry"
+        },
+        {
+            "attempt": 2,
+            "outcome": "timeout",
+            "action": "retry"
+        },
+        {
+            "attempt": 3,
+            "outcome": "success",
+            "action": "completed"
+        }
+    ],
+    "malformed_response": [
+        {
+            "attempt": 1,
+            "outcome": "malformed_response",
+            "action": "needs_review"
+        }
+    ]
+}

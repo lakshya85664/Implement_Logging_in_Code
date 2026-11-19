@@ -1,0 +1,17 @@
+{
+    "success_metrics": {
+        "adapter_calls": 1,
+        "successful_calls": 1,
+        "failed_calls": 0,
+        "duration_ms": 0.141
+    },
+    "failure_metrics": {
+        "adapter_calls": 1,
+        "successful_calls": 0,
+        "failed_calls": 1,
+        "duration_ms": 0.104
+    },
+    "total_adapter_calls": 2,
+    "total_successful_calls": 1,
+    "total_failed_calls": 1
+}

@@ -1,0 +1,56 @@
+{
+    "task": "Task 3 - Failure, Retry, and Replay Safety",
+    "max_retries": 3,
+    "scenarios": {
+        "timeout_recovery": {
+            "status": "completed",
+            "action": "completed",
+            "attempts": 3,
+            "business_key": "BUSINESS-TASK3-001",
+            "recovery_trace": [
+                {
+                    "attempt": 1,
+                    "outcome": "timeout",
+                    "action": "retry"
+                },
+                {
+                    "attempt": 2,
+                    "outcome": "timeout",
+                    "action": "retry"
+                },
+                {
+                    "attempt": 3,
+                    "outcome": "success",
+                    "action": "completed"
+                }
+            ],
+            "message": "Invoice processed successfully"
+        },
+        "malformed_response": {
+            "status": "needs_review",
+            "action": "needs_review",
+            "attempts": 1,
+            "business_key": "BUSINESS-TASK3-002",
+            "recovery_trace": [
+                {
+                    "attempt": 1,
+                    "outcome": "malformed_response",
+                    "action": "needs_review"
+                }
+            ],
+            "message": "Invoice requires operator review"
+        },
+        "duplicate_replay": {
+            "status": "duplicate_prevented",
+            "action": "duplicate_prevented",
+            "attempts": 0,
+            "business_key": "BUSINESS-TASK3-001",
+            "message": "Duplicate invoice processing prevented"
+        }
+    },
+    "summary": {
+        "timeout_recovered": true,
+        "malformed_response_requires_review": true,
+        "duplicate_prevented": true
+    }
+}

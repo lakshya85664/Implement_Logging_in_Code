@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+.env
+.env.*
+
+# Generated runtime artifacts (keep committed assessment evidence if required)
+# Uncomment these if generated evidence should not be committed:
+# outputs/*.tmp
+# traces/*.tmp
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,122 @@
+{
+    "task": "Task 2 - Logging Implementation",
+    "workflow_result": {
+        "status": "completed",
+        "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+        "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+        "result": {
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "status": "completed",
+            "message": "Invoice workflow completed successfully",
+            "completed_at": "2026-11-19T13:19:30.058862Z"
+        },
+        "tasks": [
+            {
+                "task_id": "TASK-001",
+                "task_name": "validate_invoice",
+                "status": "completed",
+                "attempts": 0
+            },
+            {
+                "task_id": "TASK-002",
+                "task_name": "process_invoice",
+                "status": "completed",
+                "attempts": 0
+            },
+            {
+                "task_id": "TASK-003",
+                "task_name": "finalize_invoice",
+                "status": "completed",
+                "attempts": 0
+            }
+        ],
+        "event_count": 3,
+        "logging": "structured_json"
+    },
+    "log_count": 5,
+    "logs": [
+        {
+            "timestamp": "2026-11-19T13:19:30.058023+00:00",
+            "level": "INFO",
+            "logger": "invoice_workflow",
+            "event": "workflow.created",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice workflow created",
+            "details": {
+                "invoice_id": "INV-TASK2-001"
+            }
+        },
+        {
+            "timestamp": "2026-11-19T13:19:30.058235+00:00",
+            "level": "INFO",
+            "logger": "invoice_workflow",
+            "event": "workflow.started",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice workflow started",
+            "details": {
+                "state": "running"
+            }
+        },
+        {
+            "timestamp": "2026-11-19T13:19:30.058389+00:00",
+            "level": "DEBUG",
+            "logger": "invoice_workflow",
+            "event": "invoice.validation.completed",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice input validation completed",
+            "details": {
+                "invoice_id": "INV-TASK2-001",
+                "amount": 25000.0,
+                "currency": "INR"
+            }
+        },
+        {
+            "timestamp": "2026-11-19T13:19:30.058570+00:00",
+            "level": "INFO",
+            "logger": "invoice_workflow",
+            "event": "audit.invoice.processed",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice processing action recorded",
+            "details": {
+                "action": "invoice_processed",
+                "invoice_id": "INV-TASK2-001",
+                "business_key": "BUSINESS-TASK2-001",
+                "outcome": "success"
+            }
+        },
+        {
+            "timestamp": "2026-11-19T13:19:30.058752+00:00",
+            "level": "INFO",
+            "logger": "invoice_workflow",
+            "event": "workflow.completed",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice workflow completed successfully",
+            "details": {
+                "state": "completed"
+            }
+        }
+    ],
+    "audit_events": [
+        {
+            "timestamp": "2026-11-19T13:19:30.058570+00:00",
+            "level": "INFO",
+            "logger": "invoice_workflow",
+            "event": "audit.invoice.processed",
+            "run_id": "368afeb4-2ecb-4938-93cd-81002a103003",
+            "correlation_id": "06295e19-35d6-4550-b69d-8e90b0dc8174",
+            "message": "Invoice processing action recorded",
+            "details": {
+                "action": "invoice_processed",
+                "invoice_id": "INV-TASK2-001",
+                "business_key": "BUSINESS-TASK2-001",
+                "outcome": "success"
+            }
+        }
+    ],
+    "redaction_check": "Sensitive fields are redacted by formatter"
+}
